@@ -14,7 +14,7 @@
   --bg-background-color: #a8f5ffcc;
 
   /* nav bar colors */
-  --bg-nav-bg-color: #df98e6;
+  --bg-nav-bg-color: #98c0e6;
   --bg-nav-toggler-color: var(--bg-secondary-color);
   --bg-nav-toggler-glow: var(--bg-highlight-color);
 
@@ -156,4 +156,13 @@ footer {
 
 .appLogo {
     max-width: 400px;
+}
+
+.calculateBtn {
+  display: flex;
+}
+
+.goDown {
+  vertical-align: bottom;
+  height: 75%;
 }
