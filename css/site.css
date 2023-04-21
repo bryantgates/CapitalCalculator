@@ -1,0 +1,159 @@
+:root {
+  /* fonts */
+  --bg-title-font: "Bebas Neue", sans-serif;
+  --bg-subtitle-font: "Fira Sans", sans-serif;
+  --bg-heading-font: "Bebas Neue", sans-serif;
+  --bg-body-font: "Roboto", sans-serif;
+
+  /*colors*/
+  --bg-primary-color: #008fd7;
+  --bg-secondary-color: #2d3f4e;
+  --bg-highlight-color: #00ffff;
+  --bg-dark-color: #212121;
+  --bg-light-color: #deeefb;
+  --bg-background-color: #a8f5ffcc;
+
+  /* nav bar colors */
+  --bg-nav-bg-color: #df98e6;
+  --bg-nav-toggler-color: var(--bg-secondary-color);
+  --bg-nav-toggler-glow: var(--bg-highlight-color);
+
+  /* form colors */
+  --bg-formfocus-border-color: var(--bg-primary-color);
+  --bg-formfocus-shadow: var(--bg-secondary-color);
+  --bg-form-background-color: var(--bg-background-color);
+
+  /* text styles */
+  --bg-title-color: var(--bg-dark-color);
+  --bg-font-size: 1.2rem;
+  --bg-font-weight: 400;
+  --bg-line-height: 1.5rem;
+}
+
+/*
+font-family: 'Allan', cursive;
+font-family: 'Bebas Neue', cursive;
+font-family: 'Fira Sans', sans-serif;
+font-family: 'Roboto', sans-serif;
+*/
+
+/* Sticky Footer*/
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--bg-body-font);
+  font-size: var(--bg-font-size);
+  font-weight: var(--bg-font-weight);
+  line-height: var(--bg-line-height);
+  color: var(--bg-dark-color);
+  background:var(--bg-background-color);
+  /* background-image: url(/img/Underlight.jpg);
+  background-repeat: no-repeat;
+  background-position:top;*/
+}
+
+main {
+  flex-grow: 1;
+  margin-top: 86px;
+}
+
+footer {
+  flex-shrink: 0;
+}
+/*END Sticky Footer*/
+
+/* START: Nav Bar */
+
+.navbar-toggler-bg {
+  color: var(--bg-toggler-color);
+  font-size: 1.5rem;
+}
+
+.navbar-toggler {
+  color: var(--bg-nav-toggler-glow);
+  border-color: var(--bg-nav-toggler-glow);
+}
+
+#mainNav {
+  background: var(--bg-nav-bg-color);
+}
+
+/* END: Nav Bar */
+
+/*Custom Buttons*/
+.btn-primary {
+  --bs-btn-bg: var(--bg-primary-color);
+  --bs-btn-border-color: var(--bg-secondary-color);
+  --bs-btn-hover-bg: var(--bg-highlight-color);
+  --bs-btn-hover-border-color: var(--bg-secondary-color);
+  --bs-btn-hover-color: var(--bg-secondary-color);
+}
+
+.btn-secondary {
+  --bs-btn-bg: var(--bg-secondary-color);
+  --bs-btn-border-color: var(--bg-secondary-color);
+  --bs-btn-hover-bg: var(--bg-highlight-color);
+  --bs-btn-hover-border-color: var(--bg-secondary-color);
+  --bs-btn-hover-color: var(--bg-secondary-color);
+}
+/* End Custom Buttons*/
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/*START: footer*/
+.socialicons {
+  font-size: 2rem;
+  color: var(--bg-secondary-color);
+  transition: 0.25s;
+}
+
+.socialicons:hover {
+  color: var(--bg-highlight-color);
+}
+
+footer {
+  background: var(--bg-nav-bg-color);
+}
+
+.footer-cta {
+  background-color: var(--bg-secondary-color);
+  border-radius: 10px;
+  width: 75%;
+}
+
+.footer-bg-cta {
+  background: linear-gradient(to bottom,var(--bg-background-color),var(--bg-background-color) 50%,var(--bg-nav-bg-color) 50%,var(--bg-nav-bg-color)) ;
+}
+
+.footer-message {
+  color: var(--bg-light-color);
+  letter-spacing: .1rem;
+}
+
+/*END: footer*/
+
+.checklist {
+    list-style-type: none;
+}
+
+.checklist>li i {
+    color: var(--bg-primary-color);
+    padding-right: .5rem;
+}
+
+.devIcons {
+    font-size: 3rem;
+    padding-left: .5rem;
+}
+
+.appLogo {
+    max-width: 400px;
+}
