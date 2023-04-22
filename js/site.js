@@ -50,7 +50,7 @@ function calculateInputs(inputs) {
       balance: remainingBalance.toFixed(2),
     };
     let totalValues = {
-      totalPrinciple: totalPrincipal.toFixed(2),
+      totalPrincipal: totalPrincipal.toFixed(2),
       totalInterest: totalInterest.toFixed(2),
       totalCost: totalCost.toFixed(2),
     };
@@ -89,11 +89,15 @@ function displayPaymentsTable(paymentArray) {
 }
 
 function displayTotals(totalArray) {
-  let principal = totalArray.totalPrinciple;
-  let interest = totalArray.totalInterest;
-  let cost = totalArray.totalCost;
+  let totalPrincipal = totalArray.totalPrincipal;
+  let totalInterest = totalArray.totalInterest;
+  let totalCost = totalArray.totalCost;
 
- document.getElementById("totalPrincipal").textContent = principal;
- document.getElementById("totalInterest").textContent = interest;
- document.getElementById("totalCost").textContent = cost;
+  let principal = totalPrincipal[totalPrincipal.length - 1];
+  let interest = totalInterest[totalInterest.length - 1];
+  let cost = totalCost[totalCost.length - 1];
+
+ document.getElementById("totalPrincipal").innerText = principal;
+ document.getElementById("totalInterest").innerText = interest;
+ document.getElementById("totalCost").innerText = cost;
 }
