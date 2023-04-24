@@ -43,16 +43,17 @@ function calculateInputs(inputs) {
 
     let paymentValues = {
       month: i,
-      payment: totalMonthlyPayment.toFixed(2),
-      principal: principalPayment.toFixed(2),
-      interest: interestPayment.toFixed(2),
-      totalInterest: totalInterest.toFixed(2),
-      balance: remainingBalance.toFixed(2),
+      payment: "$" + totalMonthlyPayment.toFixed(2),
+      principal: "$" + principalPayment.toFixed(2),
+      interest: "$" + interestPayment.toFixed(2),
+      totalInterest: "$" + totalInterest.toFixed(2),
+      balance: "$" + remainingBalance.toFixed(2),
     };
     let totalValues = {
-      totalPrincipal: totalPrincipal.toFixed(2),
-      totalInterest: totalInterest.toFixed(2),
-      totalCost: totalCost.toFixed(2),
+      payment: "$" + totalMonthlyPayment.toFixed(2),
+      totalPrincipal: "$" + totalPrincipal.toFixed(2),
+      totalInterest: "$" + totalInterest.toFixed(2),
+      totalCost: "$" + totalCost.toFixed(2),
     };
     paymentArray.push(paymentValues);
     totalArray.push(totalValues);
@@ -90,6 +91,7 @@ function displayPaymentsTable(paymentArray) {
 function displayTotals(totalArray) {
   let array = totalArray[totalArray.length - 1];
 
+  document.getElementById("monthlyPayment").textContent = array.payment;
   document.getElementById("totalPrincipal").textContent = array.totalPrincipal;
   document.getElementById("totalInterest").textContent = array.totalInterest;
   document.getElementById("totalCost").textContent = array.totalCost;
