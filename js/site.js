@@ -39,7 +39,7 @@ function calculateInputs(inputs) {
     remainingBalance -= principalPayment;
     totalInterest += interestPayment;
     totalPrincipal += principalPayment;
-    totalCost += totalInterest + totalPrincipal;
+    totalCost = totalInterest + totalPrincipal;
 
     let paymentValues = {
       month: i,
@@ -79,25 +79,18 @@ function displayPaymentsTable(paymentArray) {
     tableRow.querySelector('[data-id="interest"]').textContent = array.interest;
     tableRow.querySelector('[data-id="totalInterest"]').textContent =
       array.totalInterest;
-    tableRow.querySelector('[data-id="balance"]').textContent =
-      array.balance;
+    tableRow.querySelector('[data-id="balance"]').textContent = array.balance;
 
     tableRow.querySelector("tr").setAttribute("data-array", array.id);
 
     paymentTable.appendChild(tableRow);
-}
+  }
 }
 
 function displayTotals(totalArray) {
-  let totalPrincipal = totalArray.totalPrincipal;
-  let totalInterest = totalArray.totalInterest;
-  let totalCost = totalArray.totalCost;
+  let array = totalArray[totalArray.length - 1];
 
-  let principal = totalPrincipal[totalPrincipal.length - 1];
-  let interest = totalInterest[totalInterest.length - 1];
-  let cost = totalCost[totalCost.length - 1];
-
- document.getElementById("totalPrincipal").innerText = principal;
- document.getElementById("totalInterest").innerText = interest;
- document.getElementById("totalCost").innerText = cost;
+  document.getElementById("totalPrincipal").textContent = array.totalPrincipal;
+  document.getElementById("totalInterest").textContent = array.totalInterest;
+  document.getElementById("totalCost").textContent = array.totalCost;
 }
